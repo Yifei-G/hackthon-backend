@@ -33,7 +33,7 @@ To Run this application Locally you first need to set up the database, you can j
 matrix_api_database_container service inside the docker-compose.yml file using your IDE, or
 run:
 ```bash
-docker-compose up matrix_api_database_container
+docker-compose -f docker-compose.yaml up -d matrix_api_database_container
 ```
 
 
