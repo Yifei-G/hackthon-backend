@@ -1,0 +1,1 @@
+docker-compose -f docker-compose.yaml up -d matrix_api_database_container

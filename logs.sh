@@ -1,0 +1,1 @@
+docker logs matrix_api_container -f

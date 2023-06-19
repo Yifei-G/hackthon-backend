@@ -1,0 +1,45 @@
+version: '3.3'
+services:
+# Matrix API Spring Boot Application
+  matrix_api:
+    container_name: matrix_api_container
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - PROXY=https://username:password@proxy-hostname:port/
+    ports:
+      - "8085:8085"
+    depends_on:
+      - matrix_api_database_container
+    networks:
+      - matrix_api_network
+    environment:
+      - ENVIRONMENT=prod
+
+# Database
+  matrix_api_database_container:
+    hostname: matrix_api_database_container
+    container_name: matrix_api_database_container
+    image: postgres:11.12-alpine
+    restart: always
+    networks:
+      - matrix_api_network
+    environment:
+      POSTGRES_DB: matrix_api_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    volumes:
+      - matrix_api_db:/var/lib/postgresql/data
+    ports:
+      - "5435:5432"
+
+# Volumes
+volumes:
+  matrix_api_db:
+
+# Networks
+networks:
+  matrix_api_network:
+    driver: bridge

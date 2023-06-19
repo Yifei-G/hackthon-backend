@@ -1,0 +1,6 @@
+spring:
+
+  datasource:
+    url: jdbc:postgresql://matrix_api_database_container:5432/matrix_api_db
+    username: admin
+    password: admin
