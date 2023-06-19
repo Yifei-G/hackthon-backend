@@ -1,7 +1,7 @@
 #!/bin/bash
 
 json='{
-    "message": "This is a message",
+    "message": "This is a message"
 }'
 
 username="admin"
