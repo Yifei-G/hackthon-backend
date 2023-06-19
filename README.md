@@ -57,7 +57,7 @@ Please replace the word 'Application' with the actual name of your application's
 To start the application, use the following command:
 
 ```bash
-npm run serve
+gradle clean bootRun
 ```
 
 
