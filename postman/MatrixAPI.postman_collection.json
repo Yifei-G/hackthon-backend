@@ -73,7 +73,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8085/api/message",
+					"raw": "http://localhost:8085/api/message/all",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -81,7 +81,8 @@
 					"port": "8085",
 					"path": [
 						"api",
-						"message"
+						"message",
+						"all"
 					]
 				}
 			},
