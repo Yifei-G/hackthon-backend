@@ -34,7 +34,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"message\": \"Holaaaa tri mardito\"\n}\n\n"
+					"raw": "{\n\t\"message\": \"TEST MESSAGE\"\n}\n\n"
 				},
 				"url": {
 					"raw": "http://localhost:8085/api/message/send",
