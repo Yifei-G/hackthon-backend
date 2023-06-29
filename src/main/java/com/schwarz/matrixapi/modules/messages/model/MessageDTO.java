@@ -9,7 +9,7 @@ import lombok.*;
 @ToString
 @Builder
 public class MessageDTO {
-
+    private Long id;
+    @NonNull
     private String message;
-
 }

@@ -27,7 +27,7 @@ public class MessageService {
        List<Message> messages = this.messageRepository.findAll(Sort.by(Sort.Direction.DESC, "createdAt"));
        return messages.stream().map(message ->
                MessageDTO.builder()
-                       .message(message.getMessage()).build()).toList();
+                       .message(message.getMessage()).id(message.getId()).build()).toList();
     }
 
     public void createMessage(MessageDTO messageDTO) {
